@@ -7,16 +7,16 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.5",
-        "laravel/framework": "^9.45",
+        "laravel/framework": "^9.47",
         "laravel/sanctum": "^2.15.1",
-        "laravel/tinker": "^2.7",
+        "laravel/tinker": "^2.8",
         "mostafaznv/laracache": "^2.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.21.0",
-        "laravel/sail": "^1.16.6",
+        "laravel/sail": "^1.18.0",
         "mockery/mockery": "^1.5.1",
-        "nunomaduro/collision": "^6.3",
+        "nunomaduro/collision": "^6.4",
         "phpunit/phpunit": "^9.5.27",
         "spatie/laravel-ignition": "^1.6"
     },
