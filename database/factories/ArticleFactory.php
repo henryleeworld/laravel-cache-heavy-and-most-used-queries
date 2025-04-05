@@ -14,13 +14,13 @@ class ArticleFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'title'        => $this->faker->unique()->sentence,
-            'content'      => $this->faker->unique()->paragraph(6),
+            'title'        => fake()->unique()->sentence,
+            'content'      => fake()->unique()->paragraph(6),
             'published_at' => null,
-            'reviewed'     => $this->faker->randomElement([0, 1]),
+            'reviewed'     => fake()->randomElement([0, 1]),
         ];
     }
 }

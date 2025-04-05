@@ -23,18 +23,21 @@ class Article extends Model
         'reviewed',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'reviewed' => 'bool',
-    ];
-
     protected $dates = [
         'published_at',
     ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'reviewed' => 'bool',
+        ];
+    }
 
     /**
      * Uppercase Title accessor.
