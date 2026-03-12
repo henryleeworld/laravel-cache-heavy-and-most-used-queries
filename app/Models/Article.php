@@ -9,22 +9,19 @@ use Mostafaznv\LaraCache\Traits\LaraCache;
 
 class Article extends Model
 {
+    /** @use HasFactory<\Database\Factories\ArticleFactory> */
     use HasFactory, LaraCache;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [
         'title',
         'content',
         'published_at',
         'reviewed',
-    ];
-
-    protected $dates = [
-        'published_at',
     ];
 
     /**
@@ -35,16 +32,13 @@ class Article extends Model
     protected function casts(): array
     {
         return [
+            'published_at' => 'date',
             'reviewed' => 'bool',
         ];
     }
 
     /**
      * Uppercase Title accessor.
-     *
-     * @param string $value
-     *
-     * @return string
      */
     public function getTitleAttribute(string $value): string
     {
@@ -53,8 +47,6 @@ class Article extends Model
 
     /**
      * Define Cache Entities Entities
-     *
-     * @return CacheEntity[]
      */
     public static function cacheEntities(): array
     {

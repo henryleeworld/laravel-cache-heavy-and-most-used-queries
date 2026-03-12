@@ -6,6 +6,9 @@ use App\Models\Article;
 
 class ArticlesController extends Controller
 {
+    /**
+     * Display the specified resource.
+     */
     public function show() 
     {
         $articleCache = Article::cache()->get('latest')->skip(0)->take(5)->get();
